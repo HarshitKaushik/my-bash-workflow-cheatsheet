@@ -3,7 +3,7 @@ Cheat sheet for my bash/zsh workflow right now.
 
 ## Git
 ```git config user.name "${name}"``` - Set the user name locally. (In .git/config).
-```git config user.email ${email}``` - Set the user email locally. (In .git/config).
+```git config user.email "${email}"``` - Set the user email locally. (In .git/config).
 
 ## Bash
 
