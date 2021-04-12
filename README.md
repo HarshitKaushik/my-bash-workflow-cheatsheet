@@ -25,7 +25,8 @@ Cheat sheet for my bash/zsh workflow right now.
 ```python -m ${libraryName} --version``` - Check if and what version of a python library is installed.  
 ```python -m pip install ${libraryName}``` - Install a library with pip. It can also be run as pip install ${libraryName}.  
 ### Django
-```django-admin startproject helloworld``` - Set up a new project for Django.  
+```django-admin startproject ${projectName}``` - Set up a new project for Django.  
+```django-admin startapp ${appName}``` - Set up a new app in the project.
 ```python manage.py runserver``` - Run Django webserver.  
 ```python manage.py runserver ${ip}:${port}``` - If you want to change the server’s IP, pass it along with the port. For example, to listen on all available public IPs (which is useful if you are running Vagrant or want to show off your work on other computers on the network.)  
 ```python manage.py makemigrations ${app}``` - By running makemigrations, you’re telling Django that you’ve made some changes to your models (in this case, you’ve made new ones) and that you’d like the changes to be stored as a migration.  
