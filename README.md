@@ -4,16 +4,19 @@ Cheat sheet for my bash/zsh workflow right now.
 ## Git
 ```git config user.name "${name}"``` - Set the user name locally. (In .git/config).  
 ```git config user.email "${email}"``` - Set the user email locally. (In .git/config).  
+```git checkout -b ${branchName}```- Create a new branch and checkout that new branch.  
 
 ## Bash
 
 ```chgrp -R ${groupName} ${directory}``` - Change the group ownership of all files and folders recursively in a root folder and for the root folder itself.  
+```sudo chown ${username}: ${directory}``` - Make a user an owner of a directory.  
+```sudo chmod u+w ${directory}``` - Add write access to the user who is an owner of the directory.  
 ```ls -a ${directoryName}``` - View contents of a folder along with the hidden files.  
 ```ls -altr ${directoryName}``` - View contents of a folder in detail.  
 ```ls -ld ${directoryName}``` - Check the permissions of a directory instead of contents.  
-```ssh-keygen -t ed25519 -C "${email}"``` - Generate ssh keys for an email.  
 ```ls -la ${directoryName}``` - Show current permissions of a folder.  
-
+```ssh-keygen -t ed25519 -C "${email}"``` - Generate ssh keys for an email.  
+```ssh -L :${localPort}:${destination}:${destinationPort} ${userName}@${destination}``` - Local port forwarding (or ssh tunneling on the local machine).
 ## Docker
 
 ```docker-compose -f dev.yml up ${imageName}``` -  Run an image with imageName in docker.  
