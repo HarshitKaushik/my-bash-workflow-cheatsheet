@@ -5,6 +5,7 @@ Cheat sheet for my bash/zsh workflow right now.
 ```git config user.email "${email}"``` - Set the user email locally. (In .git/config).  
 ```git checkout -b ${branchName}```- Create a new branch and checkout that new branch.  
 ```dir_to_ignore/``` in the `.gitignore` file - Ignore everything in the directory.  
+```git branch --set-upstream <remote-branch>``` - Sets the default remote branch for the current local branch.  
 ## Bash
 ```chgrp -R ${groupName} ${directory}``` - Change the group ownership of all files and folders recursively in a root folder and for the root folder itself.  
 ```sudo chown ${username}: ${directory}``` - Make a user an owner of a directory.  
