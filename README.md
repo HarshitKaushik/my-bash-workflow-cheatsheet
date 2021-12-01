@@ -6,6 +6,21 @@ Cheat sheet for my bash/zsh workflow right now.
 ```git checkout -b ${branchName}```- Create a new branch and checkout that new branch.  
 ```dir_to_ignore/``` in the `.gitignore` file - Ignore everything in the directory.  
 ```git branch --set-upstream <remote-branch>``` - Sets the default remote branch for the current local branch.  
+### Merge commits from dev branch into production branch
+```bash
+# We can merge master into the development first so that if there are any conflicts, 
+# we can resolve in the development branch itself and our master remains clean.
+git merge master
+# (resolve any merge conflicts if there are any)
+git checkout master
+git merge development 
+# (there won't be any conflicts now)
+# If you want to keep track of who did the merge and when, you can use --no-ff flag 
+# while merging to do so. This is generally useful only when merging development into
+#  the master (last step), because you might need to merge master into development 
+# (first step) multiple times in your workflow, and creating a commit node for these
+#  might not be very useful.
+```
 ## Bash
 ```chgrp -R ${groupName} ${directory}``` - Change the group ownership of all files and folders recursively in a root folder and for the root folder itself.  
 ```sudo chown ${username}: ${directory}``` - Make a user an owner of a directory.  
